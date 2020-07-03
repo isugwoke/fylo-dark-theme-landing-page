@@ -11,7 +11,14 @@
 
     --color-accent-cyan: hsl(176, 68%, 64%);  //inside call-to-action gradient
     --color-accent-blue: hsl(198, 60%, 50%); //inside call-to-action gradient
+
+    // SPACING
+    --mt-md: 4rem;
+    --mb-sm: 3rem;
+    --mt-sm: 3rem;
 }
+
+
 
 
 // Media Queries
@@ -37,7 +44,7 @@ body{
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 1.4rem;
-    line-height: 1.6;
+    line-height: 1.5;
     background-color: var(--bg-color-dark-blue-1);
     color: var(--color-primary-white);
 }

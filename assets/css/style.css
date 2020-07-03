@@ -7,7 +7,10 @@
   --bg-color-dark-blue-3: hsl(216, 53%, 9%);
   --bg-color-dark-blue-4: hsl(219, 30%, 18%);
   --color-accent-cyan: hsl(176, 68%, 64%);
-  --color-accent-blue: hsl(198, 60%, 50%); }
+  --color-accent-blue: hsl(198, 60%, 50%);
+  --mt-md: 4rem;
+  --mb-sm: 3rem;
+  --mt-sm: 3rem; }
 
 * {
   margin: 0;
@@ -26,6 +29,85 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 1.4rem;
-  line-height: 1.6;
+  line-height: 1.5;
   background-color: var(--bg-color-dark-blue-1);
   color: var(--color-primary-white); }
+
+.logo {
+  height: 5rem; }
+
+.heading {
+  font-family: 'Raleway', sans-serif; }
+
+.heading-1 {
+  font-size: 3.5rem; }
+
+.btn__cta, .btn__cta:link, .btn__cta:visited {
+  color: inherit;
+  text-decoration: none;
+  background-image: linear-gradient(45deg, var(--color-accent-cyan), var(--color-accent-blue));
+  padding: 1.3rem 8rem;
+  border-radius: 5rem;
+  outline: none;
+  border: none; }
+
+.navigation__nav {
+  display: flex;
+  max-width: 45%;
+  list-style: none; }
+
+.navigation__nav-item:not(:last-child) {
+  margin-right: 5rem; }
+
+.navigation__nav-link:link, .navigation__nav-link:visited {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.5s; }
+
+.navigation__nav-link:hover {
+  color: var(--color-accent-cyan); }
+
+.intro {
+  margin-top: var(--mt-md); }
+  .intro__img {
+    height: 45rem; }
+  .intro__text {
+    max-width: 50%;
+    text-align: center;
+    margin-top: var(--mt-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .intro__text-body {
+    font-size: 1.7rem;
+    max-width: 90%;
+    margin-top: var(--mt-md);
+    margin-bottom: var(--mb-sm); }
+
+.header {
+  font-family: 'Raleway', sans-serif; }
+
+.navigation, .inner-wrapper, .footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 95%;
+  max-width: 1440px;
+  padding: 6rem 5rem; }
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.intro {
+  background-image: url(../imgs/bg-curvy-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  padding-bottom: 13rem; }
+
+.features {
+  background-color: var(--bg-color-dark-blue-2);
+  margin-top: -2rem; }

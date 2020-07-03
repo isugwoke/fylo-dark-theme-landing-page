@@ -1,0 +1,88 @@
+///////////////////////////////////////////
+//INDEPENDENT COMPONENTS
+.logo{
+    height: 5rem;
+}
+.heading{
+    font-family: 'Raleway', sans-serif;
+}
+.heading-1{
+    font-size: 3.5rem;
+}
+//buttons
+.btn{
+    &__cta{
+        &,
+        &:link,
+        &:visited{
+            color: inherit;
+            text-decoration: none;
+            background-image: linear-gradient(45deg, var(--color-accent-cyan), var(--color-accent-blue));
+            padding: 1.3rem 8rem;
+            border-radius: 5rem;
+            outline: none;
+            border: none;
+        }
+    }
+}
+
+///////////////////////////////////////////
+//HEADER
+.navigation{
+    &__nav{
+        display: flex;
+        // flex: 0 0 22%;
+        max-width: 45%;
+        // justify-content: space-between;
+
+        list-style: none;
+    }
+
+    &__nav-item:not(:last-child){
+        margin-right: 5rem;
+    }
+
+    &__nav-link:link,
+    &__nav-link:visited{
+        color: inherit;
+        text-decoration: none;
+
+        transition: all 0.5s;
+    }
+
+    &__nav-link:hover{
+        color: var(--color-accent-cyan);
+    }
+
+}
+
+///////////////////////////////////////////
+//INTRO SECTION
+.intro{
+    margin-top: var(--mt-md);
+    &__img{
+        height: 45rem;
+    }
+
+    &__text{
+        max-width: 50%;
+        text-align: center;
+        margin-top: var(--mt-md);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    &__text-body{
+        font-size: 1.7rem;
+        max-width: 90%;
+        margin-top: var(--mt-md);
+        margin-bottom: var(--mb-sm);
+    }
+}
+
+///////////////////////////////////////////
+// FEATURES SECTION
+.features{
+    
+}
