@@ -3,11 +3,23 @@
 .logo{
     height: 5rem;
 }
+
+// headings
 .heading{
     font-family: 'Raleway', sans-serif;
+    line-height: 1.3;
 }
 .heading-1{
     font-size: 3.5rem;
+}
+.heading-2{
+    font-size: 3.5rem;
+}
+.heading-3{
+    font-size: 3rem;
+}
+.heading-4{
+    font-size: 1.8rem;
 }
 //buttons
 .btn{
@@ -18,12 +30,61 @@
             color: inherit;
             text-decoration: none;
             background-image: linear-gradient(45deg, var(--color-accent-cyan), var(--color-accent-blue));
-            padding: 1.3rem 8rem;
+            padding: 1.4rem 8rem;
             border-radius: 5rem;
             outline: none;
             border: none;
+            transition: all 0.2s;
+
+            @media (hover:hover){
+                &:hover{
+                    opacity: 0.8;
+                }
+                &:active{
+                    transform: translateY(2px);
+                }
+            }
+        }
+        
+    }
+    
+}
+.btn-inline{
+    &:link,
+    &:visited{
+        color: var(--color-accent-cyan);
+        font-size: 1.6rem;
+        text-decoration: none;
+        border-bottom: 1px solid var(--color-accent-cyan);
+        padding-bottom: 0.5rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        transition: all 0.2s;
+
+        @media (hover:hover){
+            &:hover{
+                transform: translateY(-0.3rem);
+            }
+
+            &:active{
+                transform: translateY(0.2rem);
+            }
         }
     }
+    &__text{
+        display: block;
+        margin-right: 8px;
+    }
+
+    
+}
+
+//Icons
+.icon-arrow{
+    display: block;
+    height: 2rem;
+    width: 2rem;
 }
 
 ///////////////////////////////////////////
@@ -47,7 +108,7 @@
         color: inherit;
         text-decoration: none;
 
-        transition: all 0.5s;
+        transition: all 0.2s;
     }
 
     &__nav-link:hover{
@@ -65,7 +126,8 @@
     }
 
     &__text{
-        max-width: 50%;
+        width: 100%;
+        max-width: 59.1rem;
         text-align: center;
         margin-top: var(--mt-md);
         display: flex;
@@ -84,5 +146,217 @@
 ///////////////////////////////////////////
 // FEATURES SECTION
 .features{
-    
+    &__grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 12%;
+        row-gap: 8rem;
+    }
+    &__grid-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__grid-icon{
+        display: block;
+        height: 7.5rem;
+    }
+    &__grid-text{
+        font-size: 1.3rem;
+        text-align: center;
+        margin-top: var(--mt-sm);
+        width: 100%;
+        max-width: 38.4rem;
+    }
+    &__grid-text-body{
+        margin-top: 0.5rem;
+    }
+
+    &__productive{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: var(--mt-lg);
+    }
+
+    &__productive-img{
+        display: block;
+        height: 42rem;
+        flex:  0 0 50%;
+        margin-right: 5%;
+    }
+    &__productive-content{
+        flex: 1;
+        max-width: 49.7rem;
+    }
+    &__productive-text{
+        margin-bottom: 2rem;
+    }
+}
+///////////////////////////////////////////////
+//TESTIMONIALS
+.testimonials{
+    margin-top: var(--mt-lg);
+    padding-top: 2rem;
+
+    position: relative;
+    display: flex;
+    flex: 1;
+
+    &__quote-bg{
+        position: absolute;
+        top: -1.5rem;
+        left: 0;
+
+    }
+    &__card{
+        background-color: var(--bg-color-dark-blue-4);
+        font-size: 1.3rem;
+        padding: 4rem 3rem 3rem 3rem;
+        position: relative;
+        z-index: 100;
+
+        &:not(:last-child){
+            margin-right: 4rem;
+        }
+
+        // display: flex;
+    }
+    &__comment{
+        margin-bottom: 1.5rem;
+    }
+    &__user{
+        display: flex;
+    }
+    &__user-photo{
+        height: 3rem;
+        border-radius: 50%;
+    }
+    &__user-details{
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__user-name{
+        font-weight: 700;
+    }
+    &__user-job{
+        font-size: 1rem;
+    }
+}
+
+/////////////////////////////////////////////////////
+// GET STARTED
+.get-started{
+    margin-top: var(--mt-lg);
+    background-color: var(--bg-color-dark-blue-1);
+    box-shadow: 0 0.5rem 1.5rem hsla(0, 0%, 0%, 0.6);
+    border-radius: 0.8rem;
+    width: 100%;
+    max-width: 79.7rem;
+    padding: 4rem 6rem;
+    font-size: 1.4rem;
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -13rem;
+
+    &__text-box{
+        max-width: 95%;
+        text-align: center;
+    }
+    &__text{
+        margin: 2rem 0 3rem 0;
+    }
+    &__form{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__email-label{
+        display: none;
+    }
+    &__email-input{
+        flex: 0 0 65%;
+        margin-right: 1rem;
+        border-radius: 5rem;
+        border: none;
+        padding: 0 4rem;
+        font: inherit;
+        font-size: 1.6rem;
+    }
+    &__btn{
+        flex: 1;
+        max-width: 20.3rem;
+        padding: 1.4rem 0;
+        cursor: pointer;
+    }
+
+}
+
+////////////////////////////////////////////////////////
+// FOOTER
+.footer{
+    &__content{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: var(--mt-md);
+    }
+    &__location{
+        display: flex;
+        align-items: flex-start;
+    }
+    &__location-address{
+        max-width: 30rem;
+    }
+    &__icon{
+        width: 2rem;
+        height: 2rem;
+        margin-right: 2rem;
+    }
+    &__contact{}
+    &__contact-item{
+        display: flex;
+        margin-bottom: 2rem;
+    }
+    &__links{
+        list-style: none;
+    }
+    &__links-item{
+        margin-bottom: 1rem;
+    }
+    &__links-link{
+        &:link,
+        &:visited{
+            color: #fff;
+            text-decoration: none;
+        }
+
+        &:hover{
+            color: var(--color-accent-cyan);
+        }
+    }
+
+    &__socials{
+        display: flex;
+    }
+    &__social-icon{
+        height: 3rem;
+        width: 3rem;
+        fill: #fff;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        padding: 7px;
+        cursor: pointer;
+
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+
+        &:hover{
+            fill: var(--color-accent-cyan);
+            border-color: var(--color-accent-cyan);
+        }
+    }
 }
