@@ -17,9 +17,16 @@
     --mt-md: 4rem;
     --mt-sm: 3rem;
     --mb-sm: 3rem;
-
-    // Media Queries
 }
+
+ // Media Queries
+ $bp-lg: 1025px; 
+ $bp-md-1: 968px; 
+ $bp-md-2: 800px; 
+ $bp-sm-1: 768px; 
+ $bp-sm-2: 600px; 
+ $bp-xs: 375px; 
+    
 
 
 
@@ -41,6 +48,10 @@
 html{
     font-size: 62.5% ;//1rem = 10px;
     box-sizing: border-box;
+
+   @media only screen and (max-width:$bp-sm-2) {
+       font-size: 58%; 
+   }
 }
 
 body{

@@ -15,6 +15,17 @@
     max-width: 1440px;
     padding: 0 5rem;
 
+    @media only screen and (max-width: $bp-lg) {
+        padding: 0 3rem;
+    }
+    @media only screen and (max-width:$bp-sm-1) {
+    width: 99%;
+    }
+    @media only screen and (max-width:$bp-xs) {
+    width: 100%;
+    padding: 2rem;
+    }
+
 }
 .navigation{
     display: flex;
@@ -26,11 +37,26 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
-
     padding-bottom: 19rem;
+
+    @media only screen and (max-width:$bp-sm-1) {
+        background-image: url(../imgs/bg-curvy-mobile.svg);
+        padding-bottom: 0rem;
+
+       }
+
 }
 .features{
     background-color: var(--bg-color-dark-blue-2);
+
+    @media only screen and (max-width:$bp-sm-1) {
+        // margin-top: -32rem;
+        padding-top: 17rem;
+       }
+    @media only screen and (max-width:$bp-sm-2) {
+        margin-top: -1rem;
+       }
+
 }
 .footer{
     background-color: var(--bg-color-dark-blue-3);

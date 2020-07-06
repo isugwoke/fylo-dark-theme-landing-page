@@ -2,6 +2,10 @@
 //INDEPENDENT COMPONENTS
 .logo{
     height: 5rem;
+
+    @media only screen and (max-width:$bp-sm-1) {
+        height: 3rem;
+    }
 }
 
 // headings
@@ -90,17 +94,29 @@
 ///////////////////////////////////////////
 //HEADER
 .navigation{
+    @media only screen and (max-width:$bp-xs) {
+        justify-content: flex-start !important;
+
+    }
     &__nav{
         display: flex;
         // flex: 0 0 22%;
         max-width: 45%;
-        // justify-content: space-between;
-
         list-style: none;
+
+        @media only screen and (max-width:$bp-xs) {
+            margin-left: 4rem;
+    
+        }
     }
 
     &__nav-item:not(:last-child){
         margin-right: 5rem;
+
+        @media only screen and (max-width:$bp-sm-1) {
+            margin-right: 2rem;
+
+        }
     }
 
     &__nav-link:link,
@@ -123,6 +139,16 @@
     margin-top: var(--mt-md);
     &__img{
         height: 45rem;
+
+        @media only screen and (max-width: $bp-md-1) {
+            height: 38rem;
+        }
+        @media only screen and (max-width:$bp-sm-1) {
+            height: 28rem;
+        }
+        @media only screen and (max-width: $bp-xs) {
+            height: 23rem;
+        }
     }
 
     &__text{
@@ -151,6 +177,10 @@
         grid-template-columns: 1fr 1fr;
         column-gap: 12%;
         row-gap: 8rem;
+
+        @media only screen and (max-width:$bp-sm-1) {
+            grid-template-columns: 1fr;
+        }
     }
     &__grid-item{
         display: flex;
@@ -165,8 +195,12 @@
         font-size: 1.3rem;
         text-align: center;
         margin-top: var(--mt-sm);
-        width: 100%;
         max-width: 38.4rem;
+
+        @media only screen and (max-width:$bp-sm-1) {
+            font-size: 1.5rem;
+            max-width: 90%;
+        }
     }
     &__grid-text-body{
         margin-top: 0.5rem;
@@ -177,19 +211,41 @@
         align-items: center;
         justify-content: space-around;
         margin-top: var(--mt-lg);
+
+        @media only screen and (max-width:$bp-sm-1) {
+            flex-direction: column;
+        }
     }
 
     &__productive-img{
         display: block;
         height: 42rem;
-        flex:  0 0 50%;
+        flex: 0 0 50%;
         margin-right: 5%;
+
+        @media only screen and (max-width: $bp-md-1) {
+            height: 30rem;
+        }
+        @media only screen and (max-width:$bp-sm-1) {
+            height: 28rem;
+            width: 100%;
+        }
+        @media only screen and (max-width: $bp-xs) {
+            height: 25rem;
+        }
     }
     &__productive-content{
         flex: 1;
-        max-width: 49.7rem;
+        // max-width: 49.7rem;
+        max-width: 48rem;
+
+        @media only screen and (max-width:$bp-sm-1) {
+            max-width: 100%;
+            margin-top: 6rem;
+        }
     }
     &__productive-text{
+        margin-top: 2rem;
         margin-bottom: 2rem;
     }
 }
@@ -201,7 +257,13 @@
 
     position: relative;
     display: flex;
-    flex: 1;
+
+    @media only screen and (max-width:$bp-sm-1) {
+        flex-direction: column;
+        align-items: center;    
+    }
+
+    
 
     &__quote-bg{
         position: absolute;
@@ -219,6 +281,20 @@
         &:not(:last-child){
             margin-right: 4rem;
         }
+
+        @media only screen and (max-width: $bp-md-2){
+            &:not(:last-child){
+                margin-right: 3rem;
+            }
+        }
+        @media only screen and (max-width:$bp-sm-1){
+                &:not(:last-child){
+                    margin-right: 0;
+                }
+                margin-bottom: 4rem;
+                font-size: 1.4rem;
+                max-width: 95%;
+            }
 
         // display: flex;
     }
@@ -262,6 +338,10 @@
     flex-direction: column;
     margin-bottom: -13rem;
 
+    @media only screen and (max-width:$bp-sm-1) {
+        padding: 4rem 2.5rem;
+    }
+
     &__text-box{
         max-width: 95%;
         text-align: center;
@@ -272,6 +352,10 @@
     &__form{
         display: flex;
         justify-content: space-between;
+        
+        @media only screen and (max-width:$bp-sm-1) {
+            flex-direction: column;
+        }
     }
     &__email-label{
         display: none;
@@ -281,15 +365,26 @@
         margin-right: 1rem;
         border-radius: 5rem;
         border: none;
-        padding: 0 4rem;
+        padding: 0.8rem 4rem;
+
+        // padding: 0 4rem;
         font: inherit;
         font-size: 1.6rem;
+
+        @media only screen and (max-width:$bp-sm-1) {
+            width: 100%;
+            margin-bottom: 3rem;
+        }
     }
     &__btn{
         flex: 1;
         max-width: 20.3rem;
         padding: 1.4rem 0;
         cursor: pointer;
+
+        @media only screen and (max-width:$bp-sm-1) {
+            max-width: 100%;
+        }
     }
 
 }
@@ -302,10 +397,19 @@
         display: flex;
         justify-content: space-between;
         margin-top: var(--mt-md);
+
+        @media only screen and (max-width:$bp-sm-1) {
+            flex-direction: column;
+        }
     }
     &__location{
         display: flex;
         align-items: flex-start;
+        margin-right: 2.5rem;
+
+        @media only screen and (max-width:$bp-sm-1) {
+            margin-bottom: 6rem;
+        }
     }
     &__location-address{
         max-width: 30rem;
@@ -315,13 +419,27 @@
         height: 2rem;
         margin-right: 2rem;
     }
-    &__contact{}
+    &__contact{
+        margin-right: 2.5rem;
+
+        @media only screen and (max-width:$bp-sm-1) {
+            margin-bottom: 6rem;
+        }
+    }
     &__contact-item{
         display: flex;
         margin-bottom: 2rem;
     }
     &__links{
         list-style: none;
+        margin-right: 2.5rem;
+    }
+
+    &__links--1,
+    &__links--2{
+        @media only screen and (max-width:$bp-sm-1) {
+            margin-bottom: 6rem;
+        }
     }
     &__links-item{
         margin-bottom: 1rem;
@@ -340,6 +458,10 @@
 
     &__socials{
         display: flex;
+
+        @media only screen and (max-width:$bp-sm-1) {
+            justify-content: center;
+        }
     }
     &__social-icon{
         height: 3rem;
